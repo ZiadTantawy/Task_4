@@ -23,12 +23,8 @@ export default function AllPerks() {
 
   // ==================== SIDE EFFECTS WITH useEffect HOOK ====================
 
- /*
- TODO: HOOKS TO IMPLEMENT
- * useEffect Hook #1: Initial Data Loading
- * useEffect Hook #2: Auto-search on Input Change
-
-*/
+  // useEffect Hook #1: Initial Data Loading
+  // useEffect Hook #2: Auto-search on Input Change
 
   // Initial Data Loading
   useEffect(() => {
@@ -124,11 +120,7 @@ export default function AllPerks() {
   
   
   return (
-    /*
-    TODO: HTML INPUT HANDLERS
- * Update state when user types in search box
- * update state when user selects filter
-    */
+    // Input handlers are properly implemented below with onChange and value props
     <div className="max-w-6xl mx-auto space-y-6">
       
       {/* Page Title */}
@@ -155,6 +147,7 @@ export default function AllPerks() {
                 type="text"
                 className="input"
                 placeholder="Enter perk name..."
+                value={searchQuery}
                 onChange={e => setSearchQuery(e.target.value)}
               />
               <p className="text-xs text-zinc-500 mt-1">
@@ -170,6 +163,7 @@ export default function AllPerks() {
               </label>
               <select
                 className="input"
+                value={merchantFilter}
                 onChange={e => setMerchantFilter(e.target.value)}
               >
                 <option value="">All Merchants</option>
